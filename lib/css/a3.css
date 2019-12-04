@@ -1,0 +1,12 @@
+@page {
+  format: A3;
+  size: 297mm 420mm;
+  margin: 0mm 0mm;
+}
+
+@media print {
+  .page {
+    width: 297mm !important;
+    height: 420mm !important;
+  }
+}

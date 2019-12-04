@@ -1,0 +1,12 @@
+@page {
+  format: A2;
+  size: 420mm 594mm;
+  margin: 0mm 0mm;
+}
+
+@media print {
+  .page {
+    width: 420mm !important;
+    height: 594mm !important;
+  }
+}

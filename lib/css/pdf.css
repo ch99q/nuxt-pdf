@@ -1,0 +1,25 @@
+@media print {
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: hidden;
+  }
+
+  .page {
+    position: relative;
+    overflow: hidden;
+
+    visibility: visible;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    page-break-after: auto;
+    page-break-inside: avoid !important;
+    
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+}

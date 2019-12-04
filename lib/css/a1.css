@@ -1,0 +1,12 @@
+@page {
+  format: A1;
+  size: 594mm 841mm;
+  margin: 0mm 0mm;
+}
+
+@media print {
+  .page {
+    width: 594mm !important;
+    height: 840.75mm !important;
+  }
+}

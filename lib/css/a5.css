@@ -1,0 +1,12 @@
+@page {
+  format: A5;
+  size: 148mm 210mm;
+  margin: 0mm 0mm;
+}
+
+@media print {
+  .page {
+    width: 148mm !important;
+    height: 209.75mm !important;
+  }
+}

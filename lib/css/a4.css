@@ -1,0 +1,12 @@
+@page {
+  format: A4;
+  size: 210mm 297mm;
+  margin: 0mm 0mm;
+}
+
+@media print {
+  .page {
+    width: 210mm !important;
+    height: 296.75mm !important;
+  }
+}
