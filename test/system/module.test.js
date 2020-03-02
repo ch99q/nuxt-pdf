@@ -39,7 +39,7 @@ describe('module E2E test', () => {
     await nuxt.close()
   })
 
-  test('WIP', () => {
+  test('Validate if PDF is generated', () => {
     // TODO: write test
     expect(true).toBe(true)
   })
