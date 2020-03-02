@@ -1,4 +1,4 @@
-# Nuxt PDF
+# Nuxt PDF [WIP]
 
 [![npm](https://img.shields.io/npm/dt/nuxt-pdfsvg?style=flat-square)](https://npmjs.com/package/nuxt-pdf)
 [![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-pdf/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-pdf)
