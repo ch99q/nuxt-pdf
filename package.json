@@ -19,11 +19,14 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
-    "pdf-lib": "^1.10.0",
-    "puppeteer": "^5.2.1"
+    "pdf-lib": "^1.10.0"
   },
   "peerDependencies": {
     "nuxt": "^2.0.0",
     "puppeteer": "^5.0.0"
+  },
+  "devDependencies": {
+    "nuxt": "^2.14.1",
+    "puppeteer": "^5.2.1"
   }
 }

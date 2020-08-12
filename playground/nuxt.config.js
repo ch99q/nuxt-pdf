@@ -63,13 +63,18 @@ export default {
   pdf: {
     routes: [
       {
-        file: 'downloads/home.pdf',
+        file: 'documentation.pdf',
 
-        route: '/downloads/example1',
+        route: '/',
 
         meta: {
-          title: 'My Home',
+          title: 'Documentation',
         },
+      },
+      {
+        file: 'article.pdf',
+
+        route: '/article',
       },
     ],
   },
