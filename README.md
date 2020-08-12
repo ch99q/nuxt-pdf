@@ -13,6 +13,7 @@
 - Customizable Metadata
 - Supports (A1, A2, A3, A4, A5)
 - Support dynamic routes (Nuxt Generate)
+- Generates as you edit (Automatic PDF regeneration)
 - For **NUXT 2.x** and higher
 
 ## Table of Contents
@@ -26,21 +27,23 @@
 ## Installation
 
 ```shell
-npm install nuxt-pdf
+npm install nuxt-pdf --save-dev
 ```
 
 or
 
 ```shell
-yarn add nuxt-pdf
+yarn add -D nuxt-pdf
 ```
 
 ## Usage
 
-- Add `nuxt-pdf` to the `modules` section of your `nuxt.config.js` file:
+- Add the class `.page` to your page to display when printing, for formatting, add classes: `.a1`, `.a2`, `.a3`, `.a4` or `.a5`
+
+- Add `nuxt-pdf` to the `buildModules` section of your `nuxt.config.js` file:
 
 ```js
-modules: ["nuxt-pdf"];
+buildModules: ['nuxt-pdf']
 ```
 
 - Add a custom configuration with the `pdf` property.
@@ -51,7 +54,7 @@ You can see the available options in the example [configuration](#configuration)
 // nuxt.config.js
 
 {
-  modules: [
+  buildModules: [
     'nuxt-pdf'
   ],
   pdf: {
@@ -70,7 +73,7 @@ You can see the available options in the example [configuration](#configuration)
     /*
     * Output folder for generated pdf.
     */
-    dir: "dist",
+    dir: "static",
 
     /*
     * Function options for page.pdf([options])
@@ -84,11 +87,19 @@ You can see the available options in the example [configuration](#configuration)
     },
 
     /*
+     * Add options to the puppeteer launch.
+     * Read more: https://pptr.dev/#?product=Puppeteer&version=v2.0.0&show=api-puppeteerlaunchoptions
+     */
+    puppeteer: {
+      // Puppeteer options here... E.g. env: {}
+    }
+
+    /*
     * PDF Meta configuration. (inspired by vue-meta)
     */
     meta: {
-      title: "Default PDF title",
-      titleTemplate: "Example ─ %s",
+      title: "My Module",
+      titleTemplate: "Documentation ─ %s",
 
       author: "Christian Hansen",
       subject: "Example",
@@ -106,25 +117,37 @@ You can see the available options in the example [configuration](#configuration)
     */
     routes: [
       {
-        // PDF Filename
-        filename: "super-awesome-pdf.pdf",
-
-        // Output directory for pdf.
-        // Combined with 'dir' value in options. (default 'dist')
-        directory: "downloads/",
+        // Output file inside output folder.
+        file: "downloads/documentation.pdf",
 
         // Route to content that should be converted into pdf.
-        route: "/",
+        route: "docs",
 
         // Override global meta with individual meta for each pdf.
         meta: {
-          title: "Super Awesome PDF"
+          title: "Home"
+        }
+      },
+      {
+        // Output: static/downloads/documentation-vue.pdf
+        file: "downloads/documentation-vue.pdf",
+
+        // Will generate route https://localhost:3000/docs/vue
+        route: "docs/vue",
+
+        // Title will be Documentation - Vue
+        meta: {
+          title: "Vue"
         }
       }
     ]
   }
 }
 ```
+
+- PDF generation
+
+PDFs will be generated when running `nuxt build`, `nuxt generate` or in development `nuxt dev`
 
 ## Development
 
