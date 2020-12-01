@@ -78,7 +78,7 @@ export default {
       {
         file: 'dokumentation.pdf',
 
-        route: '/docs',
+        route: '/docs?test=true',
 
         locale: 'da',
       },
