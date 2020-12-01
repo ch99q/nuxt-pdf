@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  // target: 'static',
+  target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -78,7 +78,7 @@ export default {
       {
         file: 'dokumentation.pdf',
 
-        route: '/da/doku',
+        route: '/docs',
 
         locale: 'da',
       },
@@ -114,7 +114,7 @@ export default {
 
     defaultLocale: 'en',
 
-    strategy: 'prefix',
+    strategy: 'prefix_and_default',
 
     seo: true,
 
