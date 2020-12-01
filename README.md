@@ -13,6 +13,8 @@
 - Customizable Metadata
 - Supports (A1, A2, A3, A4, A5)
 - Support dynamic routes (Nuxt Generate)
+- Support dynamic titles (from <title> tag)
+- I18n support for specific languages
 - Generates as you edit (Automatic PDF regeneration)
 - For **NUXT 2.x** and higher
 
@@ -87,6 +89,11 @@ You can see the available options in the example [configuration](#configuration)
     },
 
     /*
+    * Enable i18n support.
+    */
+    i18n: false,
+
+    /*
      * Add options to the puppeteer launch.
      * Read more: https://pptr.dev/#?product=Puppeteer&version=v2.0.0&show=api-puppeteerlaunchoptions
      */
@@ -122,6 +129,9 @@ You can see the available options in the example [configuration](#configuration)
 
         // Route to content that should be converted into pdf.
         route: "docs",
+
+        // Specifify language for pdf. (Only when i18n is enabled!)
+        locale: 'da'
 
         // Override global meta with individual meta for each pdf.
         meta: {
