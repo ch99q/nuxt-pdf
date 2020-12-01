@@ -8,7 +8,7 @@ export default {
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
-  target: 'static',
+  // target: 'static',
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -56,20 +56,31 @@ export default {
   modules: [
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    // https://i18n.nuxtjs.org
+    'nuxt-i18n',
   ],
   /*
    ** PDF module configuration
    */
   pdf: {
+    i18n: true,
+
     routes: [
       {
         file: 'documentation.pdf',
 
-        route: '/',
+        route: '/docs',
 
         meta: {
           title: 'Documentation',
         },
+      },
+      {
+        file: 'dokumentation.pdf',
+
+        route: '/da/doku',
+
+        locale: 'da',
       },
       {
         file: 'article.pdf',
@@ -77,6 +88,47 @@ export default {
         route: '/article',
       },
     ],
+  },
+  /*
+   ** I18n module configuration
+   */
+  i18n: {
+    locales: [
+      {
+        name: 'English',
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US',
+        domain: process.env.DOMAIN_EN || 'localhost:3000',
+      },
+      {
+        name: 'Dansk',
+        code: 'da',
+        iso: 'da-DK',
+        file: 'da-DK',
+        domain: process.env.DOMAIN_DA || 'localhost.dk:3000',
+      },
+    ],
+
+    // differentDomains: true,
+
+    defaultLocale: 'en',
+
+    strategy: 'prefix',
+
+    seo: true,
+
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          welcome: 'Welcome',
+        },
+        da: {
+          welcome: 'Velkommen',
+        },
+      },
+    },
   },
   /*
    ** Content module configuration
