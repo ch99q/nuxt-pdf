@@ -40,7 +40,7 @@ yarn add -D nuxt-pdf
 
 ## Usage
 
-- Add the class `.page` to your page to display when printing, for formatting, add classes: `.a1`, `.a2`, `.a3`, `.a4` or `.a5`
+- Add the class `.page` to your page to display when printing, for formatting, add classes: `.a1`, `.a2`, `.a3`, `.a4`, `.a5`, `.letter`, `.legal`, or `.tabloid`
 
 - Add `nuxt-pdf` to the `buildModules` section of your `nuxt.config.js` file:
 
