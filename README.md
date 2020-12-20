@@ -11,7 +11,7 @@
 - Create PDF from Vue template
 - Automatic PDF Generation
 - Customizable Metadata
-- Supports (A1, A2, A3, A4, A5)
+- Supports (A1, A2, A3, A4, A5, Letter, Legal, Tabloid)
 - Support dynamic routes (Nuxt Generate)
 - Support dynamic titles (from <title> tag)
 - I18n support for specific languages
