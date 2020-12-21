@@ -1,6 +1,6 @@
 {
   "name": "nuxt-pdf",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "NuxtJS module to generate PDF files and manage PDF in your Nuxt application",
   "repository": "https://github.com/ch99q/nuxt-pdf",
   "homepage": "https://github.com/ch99q/nuxt-pdf",
