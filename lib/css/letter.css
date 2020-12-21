@@ -1,0 +1,12 @@
+@page {
+  format: Letter;
+  size: 8.5in 11in;
+  margin: 0in 0in;
+}
+
+@media print {
+  .page {
+    width: 8.5in !important;
+    height: 10.97in !important;
+  }
+}

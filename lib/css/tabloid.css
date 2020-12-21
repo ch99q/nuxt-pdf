@@ -1,0 +1,12 @@
+@page {
+  format: Tabloid;
+  size: 11in 17in;
+  margin: 0in 0in;
+}
+
+@media print {
+  .page {
+    width: 11in !important;
+    height: 16.97in !important;
+  }
+}

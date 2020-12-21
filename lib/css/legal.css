@@ -1,0 +1,12 @@
+@page {
+  format: Legal;
+  size: 8.5in 14in;
+  margin: 0in 0in;
+}
+
+@media print {
+  .page {
+    width: 8.5in !important;
+    height: 13.97in !important;
+  }
+}
