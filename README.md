@@ -83,8 +83,7 @@ You can see the available options in the example [configuration](#configuration)
     */
     pdf: {
       // Change the format of the pdfs.
-      format: "A4",
-
+      format: "A4", // This is optional 
       printBackground: true // Include background in pdf.
     },
 
