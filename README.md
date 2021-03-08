@@ -85,6 +85,16 @@ You can see the available options in the example [configuration](#configuration)
       // Change the format of the pdfs.
       format: "A4", // This is optional 
       printBackground: true // Include background in pdf.
+    }
+
+    /*
+    * Function options for page.setViewport([options])
+    * Read more: https://pptr.dev/#?product=Puppeteer&version=v2.0.0&show=api-pagesetviewportviewport
+    */
+    viewport: {
+      // override the default viewport
+      width: 1280,
+      height: 800
     },
 
     /*
@@ -135,7 +145,16 @@ You can see the available options in the example [configuration](#configuration)
         // Override global meta with individual meta for each pdf.
         meta: {
           title: "Home"
-        }
+        },
+        pdf: {
+          // route specific pdf options
+          landscape: true // Include background in pdf.
+        },
+        viewport: {
+          // route specific viewport
+          width: 1280,
+          height: 800
+        },
       },
       {
         // Output: static/downloads/documentation-vue.pdf
