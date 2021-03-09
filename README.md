@@ -139,6 +139,9 @@ You can see the available options in the example [configuration](#configuration)
         // Route to content that should be converted into pdf.
         route: "docs",
 
+        // Default option is to remove the route after generation so it is not accessible
+        keep: true, // defaults to false
+
         // Specifify language for pdf. (Only when i18n is enabled!)
         locale: 'da'
 
