@@ -108,7 +108,7 @@ You can see the available options in the example [configuration](#configuration)
      */
     puppeteer: {
       // Puppeteer options here... E.g. env: {}
-    }
+    },
 
     /*
     * PDF Meta configuration. (inspired by vue-meta)
@@ -143,7 +143,7 @@ You can see the available options in the example [configuration](#configuration)
         keep: true, // defaults to false
 
         // Specifify language for pdf. (Only when i18n is enabled!)
-        locale: 'da'
+        locale: 'da',
 
         // Override global meta with individual meta for each pdf.
         meta: {
