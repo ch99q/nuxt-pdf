@@ -83,9 +83,18 @@ You can see the available options in the example [configuration](#configuration)
     */
     pdf: {
       // Change the format of the pdfs.
-      format: "A4",
-
+      format: "A4", // This is optional 
       printBackground: true // Include background in pdf.
+    }
+
+    /*
+    * Function options for page.setViewport([options])
+    * Read more: https://pptr.dev/#?product=Puppeteer&version=v2.0.0&show=api-pagesetviewportviewport
+    */
+    viewport: {
+      // override the default viewport
+      width: 1280,
+      height: 800
     },
 
     /*
@@ -130,13 +139,25 @@ You can see the available options in the example [configuration](#configuration)
         // Route to content that should be converted into pdf.
         route: "docs",
 
+        // Default option is to remove the route after generation so it is not accessible
+        keep: true, // defaults to false
+
         // Specifify language for pdf. (Only when i18n is enabled!)
         locale: 'da'
 
         // Override global meta with individual meta for each pdf.
         meta: {
           title: "Home"
-        }
+        },
+        pdf: {
+          // route specific pdf options
+          landscape: true // Include background in pdf.
+        },
+        viewport: {
+          // route specific viewport
+          width: 1280,
+          height: 800
+        },
       },
       {
         // Output: static/downloads/documentation-vue.pdf
