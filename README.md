@@ -1,5 +1,7 @@
 # Nuxt PDF [WIP]
 
+> **Looking for new maintainer.** Since i don't work in the nuxt universe as much anymore, please write to me if you wish to take over this project.
+
 [![npm](https://img.shields.io/npm/dt/nuxt-pdfsvg?style=flat-square)](https://npmjs.com/package/nuxt-pdf)
 [![npm (scoped with tag)](https://img.shields.io/npm/v/nuxt-pdf/latest.svg?style=flat-square)](https://npmjs.com/package/nuxt-pdf)
 [![License](https://img.shields.io/npm/l/nuxt-pdf?style=flat-square)](http://standardjs.com)
