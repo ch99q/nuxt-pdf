@@ -40,6 +40,16 @@ or
 yarn add -D nuxt-pdf
 ```
 
+The module renders the pages with [Puppeteer](https://pptr.dev), which has to be
+installed alongside it:
+
+```shell
+npm install puppeteer --save-dev
+```
+
+Any Puppeteer release from `5.x` upwards works; only APIs that have stayed
+stable across those versions are used.
+
 ## Usage
 
 - Add the class `.page` to your page to display when printing, for formatting, add classes: `.a1`, `.a2`, `.a3`, `.a4`, `.a5`, `.letter`, `.legal`, or `.tabloid`

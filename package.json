@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "nuxt": "^2.0.0",
-    "puppeteer": "^5.0.0"
+    "puppeteer": ">=5"
   },
   "devDependencies": {
     "nuxt": "^2.14.1",
